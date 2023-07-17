@@ -6,15 +6,22 @@
 }
 
 :root {
-    --primary-text-color: rgb(18,18,18);
-    --secondary-text-color: rgb(29,29,29);
-    --accent-color-light: rgb(170,79,245);
-    --accent-color-dark: rgb(120,39,230);
+    --primary-text-color: rgb(14,14,16);
+    --secondary-text-color: rgb(24,24,27);
+    --accent-color-lightest: rgb(169,112,255);
+    --accent-color-light: rgb(145,71,255);
+    --accent-color-dark: rgb(113,55,199);
     --accent-color-aqua: rgb(94,226,240);
 }
 
 body {
     color: var(--primary-text-color);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    display: none;
 }
 
 p {
@@ -32,7 +39,7 @@ ul {
 
 
 .nav-container {
-    padding: 0.2rem 0;
+    padding: 0.5rem 2rem;
     height: 4rem;
     position: fixed;
     top: 0;
@@ -41,16 +48,14 @@ ul {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #efefef;
     box-shadow: 0 0 0.5rem #c0c0c0;
 }
 
-.nav-links ul {
-    display: flex;
-}
 
 .nav-links ul {
+    display: flex;
     gap: 1rem;
 }
 
@@ -68,20 +73,26 @@ ul {
 
 .search-bar {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 0.3rem;
 }
 
 .search-input {
-    height: 100%;
+    font-size: 1rem;
     padding: 0.3rem;
     border-radius: 0.3rem;
-    border: 0.1rem solid var(--accent-color-dark);
+    border: 0.1rem solid rgb(205, 205, 205);
+}
+
+.search-input:focus {
+    outline: none !important;
+    border: 0.1rem solid var(--accent-color-lightest);
 }
 
 .search-button {
-    height: 100%;
-    background-color: var(--accent-color-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--accent-color-light);
     color: white;
     padding: 0.4rem 1rem;
     border: none;
@@ -90,7 +101,7 @@ ul {
 }
 
 .search-button:hover {
-    background-color: var(--accent-color-light);
+    background-color: var(--accent-color-dark);
 }
 
 main {
@@ -101,7 +112,51 @@ main {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 2rem;
-    justify-content: space-between;
-    align-items: start;
+    row-gap: 5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 62%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: var(--secondary-text-color);
+        color: white;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        display: block;
+        line-height: 2rem;
+        margin: 1rem;
+    }
 }
