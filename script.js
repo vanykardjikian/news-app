@@ -2,12 +2,12 @@ const API_KEY = "gJY8ngGxHYmHmclHvvIEBkoxsEYs7WwM";
 const CATEGORY_URL = "https://api.nytimes.com/svc/topstories/v2/"
 const SEARCH_URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q="
 
+
 window.addEventListener('load', () => fetchNewsByCategory('home'))
 
 async function fetchNewsByQuery(query) {
     res = await fetch(`${SEARCH_URL}${query}&api-key=${API_KEY}`)
     const data = await res.json()
-    // If from search => 1, category => 0
     bindData(data.response.docs, 'search')
 }
 
@@ -97,3 +97,7 @@ let navlinks = document.querySelector('.nav-links')
 menuIcn.addEventListener('click', () => {
     navlinks.classList.toggle('active')
 })
+
+window.onscroll = () => {
+    navlinks.classList.remove('active')
+}

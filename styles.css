@@ -47,10 +47,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #efefef;
-    box-shadow: 0 0 0.5rem #c0c0c0;
+    background-color: rgb(238, 238, 238);;
+    box-shadow: 0 0 0.4rem #c0c0c0;
 }
-
 
 .nav-links ul {
     display: flex;
@@ -107,7 +106,7 @@ ul {
 #search-result {
     margin: 2rem;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 main {
@@ -124,8 +123,8 @@ main {
 }
 
 .card {
-    margin: 0.2rem;
-    width: 25rem;
+    margin: 0.3rem;
+    width: 28rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -181,7 +180,7 @@ main {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background-color: rgb(225, 225, 225);
+        background-color: rgb(238, 238, 238);
         color: black;
         font-weight: 700;
         display: none;
@@ -195,5 +194,21 @@ main {
         display: block;
         line-height: 2rem;
         margin: 1rem;
+    }
+}
+
+@media (max-width: 607px) {
+    main {
+        padding: 0;
+    }
+
+    .cards-container {
+        row-gap: 4rem;
+    }
+
+    .card {
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
     }
 }
