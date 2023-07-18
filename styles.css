@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
+
 
 :root {
     --primary-text-color: rgb(7,7,7);
@@ -65,7 +67,7 @@ ul {
 }
 
 .hover-link.active {
-    color: var(--accent-color-dark);
+    color: var(--accent-color-light);
 }
 
 .search-bar {

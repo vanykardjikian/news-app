@@ -11,6 +11,7 @@ async function fetchNews(query) {
 
 
 function bindData(articles) {
+    window.scrollTo(0, 0);
     const cardsContainer = document.querySelector('.cards-container')
     const newsCardTemplate = document.getElementById('news-card-template')
 
