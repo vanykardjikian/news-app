@@ -15,68 +15,37 @@
             <i class='bx bx-menu' id="menu-icon"></i>
             <div class="nav-links">
                 <ul>
-                    <li class="hover-link nav-item">Politics</li>
-                    <li class="hover-link nav-item">Tech</li>
-                    <li class="hover-link nav-item">Finance</li>
+                    <li class="hover-link nav-item active" id="armenia" onclick="toggleNavItem('armenia')">Home</li>
+                    <li class="hover-link nav-item" id="health" onclick="toggleNavItem('health')">Health</li>
+                    <li class="hover-link nav-item" id="technology" onclick="toggleNavItem('technology')">Technology</li>
+                    <li class="hover-link nav-item" id="sports" onclick="toggleNavItem('sports')">Sports</li>
                 </ul>
             </div>
             <div class="search-bar">
-                <input type="text" class="search-input" placeholder="Example: Armenia">
+                <input type="text" class="search-input" placeholder="e.g. Yerevan">
                 <button class="search-button">Search</button>
             </div>
         </div>
     </nav>
     <main>
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3>Title</h3>
-                    <h6>Source</h6>
-                    <p class="news-paragraph">
-                        This is my news paragraph
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3>Title</h3>
-                    <h6>Source</h6>
-                    <p class="news-paragraph">
-                        This is my news paragraph
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3>Title</h3>
-                    <h6>Source</h6>
-                    <p class="news-paragraph">
-                        This is my news paragraph
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
-                </div>
-                <div class="card-content">
-                    <h3>Title</h3>
-                    <h6>Source</h6>
-                    <p class="news-paragraph">
-                        This is my news paragraph
-                    </p>
-                </div>
-            </div>
+        <p id="search-result"></p>
+        <div class="cards-container"> 
         </div>
     </main>
+
+    <template id="news-card-template">
+        <div class="card">
+                <div class="card-header">
+                    <img src="https://via.placeholder.com/400x200" alt="news image" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="news-title">Title</h3>
+                    <h6 class="news-source">Source</h6>
+                    <p class="news-paragraph">
+                        Paragraph
+                    </p>
+                </div>
+            </div>
+    </template>
 </body>
 </html>

@@ -6,8 +6,9 @@
 }
 
 :root {
-    --primary-text-color: rgb(14,14,16);
-    --secondary-text-color: rgb(24,24,27);
+    --primary-text-color: rgb(7,7,7);
+    --secondary-text-color: rgb(60, 60, 60);
+    --tertiary-text-color: rgb(80,80,80);
     --accent-color-lightest: rgb(169,112,255);
     --accent-color-light: rgb(145,71,255);
     --accent-color-dark: rgb(113,55,199);
@@ -22,11 +23,6 @@ body {
     font-size: 2rem;
     color: var(--primary-text-color);
     display: none;
-}
-
-p {
-    color: var(--secondary-text-color);
-    line-height: 1.4rem;
 }
 
 a {
@@ -61,13 +57,14 @@ ul {
 
 .hover-link {
     cursor: pointer;
+    transition: ease 0.2s;
 }
 
 .hover-link:hover {
     color: var(--accent-color-light);
 }
 
-.hover-link:active {
+.hover-link.active {
     color: var(--accent-color-dark);
 }
 
@@ -98,10 +95,17 @@ ul {
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
+    transition: ease 0.2s;
 }
 
 .search-button:hover {
     background-color: var(--accent-color-dark);
+}
+
+#search-result {
+    margin: 2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 main {
@@ -112,21 +116,51 @@ main {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 5rem;
     justify-content: space-evenly;
     align-items: flex-start;
+    row-gap: 1.2rem;
 }
 
 .card {
+    margin: 0.2rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0rem 0rem 0.5rem rgb(205, 205, 205);
+    border-radius: 0.3rem;
+    transition: ease 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--accent-color-lightest);
+    transform: translateY(-0.3rem);
 }
 
 .card img {
     width: 100%;
 }
 
+.card-content {
+    padding: 1.2rem 1.8rem;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+}
+
+.news-source {
+    padding: 0.4rem 0 0.8rem 0;
+    font-size: 0.8rem;
+    color: var(--tertiary-text-color);
+}
+
+.news-paragraph {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color)
+}
 
 @media (max-width: 1200px) {
     html {
