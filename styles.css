@@ -22,7 +22,7 @@ body {
 }
 
 #menu-icon {
-    font-size: 2rem;
+    font-size: 3rem;
     color: var(--primary-text-color);
     display: none;
 }
@@ -110,7 +110,7 @@ ul {
 }
 
 main {
-    margin-top: 7rem;
+    margin-top: 9rem;
     padding: 0 2rem;
 }
 
@@ -174,7 +174,12 @@ main {
         display: block;
     }
 
+    .nav-container {
+        height: 6rem;
+    }
+
     .nav-links {
+        font-size: 1.4rem;
         position: absolute;
         top: 100%;
         left: 0;
@@ -192,8 +197,20 @@ main {
 
     .nav-links ul {
         display: block;
-        line-height: 2rem;
+        line-height: 3rem;
         margin: 1rem;
+    }
+    
+    .search-bar {
+        height: 2.5rem;
+    }
+
+    .search-input {
+        font-size: 1.3rem;
+    }
+
+    .search-button {
+        font-size: 1.3rem;
     }
 }
 
@@ -201,7 +218,7 @@ main {
     main {
         padding: 0;
     }
-
+    
     .cards-container {
         row-gap: 4rem;
     }
