@@ -181,8 +181,9 @@ main {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background-color: var(--secondary-text-color);
-        color: white;
+        background-color: rgb(225, 225, 225);
+        color: black;
+        font-weight: 700;
         display: none;
     }
 
