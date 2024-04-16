@@ -1,5 +1,5 @@
 # news-app
-Live preview: https://vee1807.github.io/news-app/
+Live preview: https://vanykardjikian.github.io/news-app/
 <br>
 
 __<h2>Description:</h2>__
